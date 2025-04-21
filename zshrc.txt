@@ -1,0 +1,22 @@
+alias bpython='/Users/pahujad/Library/Python/3.9/bin/bpython'
+alias p='/Users/pahujad/Library/Python/3.9/bin/bpython'
+alias bp='/Users/pahujad/Library/Python/3.9/bin/bpython'
+alias c='cherrytree'
+
+
+###############  This part modifies shell when in git repos  ############
+
+autoload -Uz vcs_info               # Load Zsh's version control info system
+autoload -U colors && colors        # Load color definitions for prompt
+
+precmd() { vcs_info }               # Run before each prompt to update Git info
+setopt prompt_subst                 # Enable prompt variable expansion
+
+# Customize how the branch is shown (only for Git)
+zstyle ':vcs_info:git:*' formats '(%b)'  # %b = current branch name
+
+# Set your prompt with Git info and color
+PROMPT='%{$fg[blue]%}%n@%m%{$reset_color%} %1~ %{$fg[magenta]%}${vcs_info_msg_0_}%{$reset_color%}%# '
+
+######################################################################
+
