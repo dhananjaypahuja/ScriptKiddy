@@ -1,3 +1,6 @@
+export PATH="$PATH:/Applications/Sublime Text.app/Contents/SharedSupport/bin"
+
+
 alias bpython='/Users/pahujad/Library/Python/3.9/bin/bpython'
 alias p='/Users/pahujad/Library/Python/3.9/bin/bpython'
 alias bp='/Users/pahujad/Library/Python/3.9/bin/bpython'
@@ -24,4 +27,3 @@ zstyle ':vcs_info:git:*' formats '(%b)'  # %b = current branch name
 PROMPT='%{$fg[blue]%}%n@%m%{$reset_color%} %1~ %{$fg[magenta]%}${vcs_info_msg_0_}%{$reset_color%}%# '
 
 ######################################################################
-
